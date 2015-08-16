@@ -1,0 +1,68 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbnail Grid with Expanding Preview</title>
+    <meta name="description" content="Thumbnail Grid with Expanding Preview">
+    <meta name="keywords" content="thumbnails, grid, preview, google image search, jquery, image grid, expanding, preview, portfolio">
+    <meta name="author" content="Codrops">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="ThumbnailGridExpandingPreview/css/default.css">
+    <link rel="stylesheet" type="text/css" href="ThumbnailGridExpandingPreview/css/component.css">
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+    <script src="ThumbnailGridExpandingPreview/js/modernizr.custom.js"></script>
+  </head>
+
+<body cz-shortcut-listen="true">
+   <h1>Teacher's class</h1>
+    <div class="container">
+      <div class="main">
+        <ul id="og-grid" class="og-grid">
+                  <% 20.times do %>
+          <li>
+            <a href="http://cargocollective.com/jaimemartinez/" data-largesrc="http://i.cdn.turner.com/v5cache/CARTOON/site/Images/i80/tj_tom_180x180.png" data-title="Teacher stuff" data-description="Your kid is horrible">
+              <img src="http://i.cdn.turner.com/v5cache/CARTOON/site/Images/i80/tj_tom_180x180.png"/>Tom</a>
+          </li>
+                    <% end %>
+
+        </ul>
+      </div>
+    </div>
+<form action="student_accounts/student_id" method="post" id="edit-form">
+                <input type="text" name="grade_math" value="A">
+                <select>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                </select>
+                <input type="submit" value="Submit"></input>
+                <h3>Special Need</h3>
+                <input type="text" name="feedback" value="Current feedback">
+</form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="ThumbnailGridExpandingPreview/js/grid.js"></script>
+    <script>
+      $(function() {
+       // $('#edit-form').hide();
+        Grid.init();
+
+        // appendEditForm();
+  });
+
+    $(function(){
+      $('a').on('click', function(event){
+      setTimeout(function() { your_func(); }, 900);
+      })
+    });
+
+      your_func = function(){
+        $('#edit-form').appendTo('.og-details');
+        $('#edit-form').show();
+     };
+
+
+    </script>
+    <script type="text/javascript" src="js/application.js"></script>
+
+</body>
